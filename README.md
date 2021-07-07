@@ -1,7 +1,9 @@
 # Hey Chat
 
-hey chat es el backend de [Hey Chat Front !!!](https://github.com/PabloDelHip/chat_hey_vue/).
+hey chat es el backend de 
 Hey chat esta echo en node JS trabajando los sockets con socket.io
+hey chat is the backend of [Hey Chat Front !!!](https://github.com/PabloDelHip/chat_hey_vue/).
+Hey chat is done in node JS working sockets with socket.io
 ## installation
 
 1. positioning yourself in the project folder, execute npm install in the console.
