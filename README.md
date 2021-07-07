@@ -1,8 +1,6 @@
 # Hey Chat
 
-hey chat es el backend de 
-Hey chat esta echo en node JS trabajando los sockets con socket.io
-hey chat is the backend of [Hey Chat Front !!!](https://github.com/PabloDelHip/chat_hey_vue/).
+Hey chat is the backend of [Hey Chat Front !!!](https://github.com/PabloDelHip/chat_hey_vue/).
 Hey chat is done in node JS working sockets with socket.io
 ## installation
 
