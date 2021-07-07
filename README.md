@@ -6,7 +6,7 @@ Hey chat esta echo en node JS trabajando los sockets con socket.io
 
 1. positioning yourself in the project folder, execute npm install in the console.
 
-2. cree el archivo .env en la raiz del proyecto y copie y pegue la informacion del archivo .env.example.
+2. create the .env file in the root of the project and copy and paste the information from the .env.example file.
 
 ```
 the default server port is 3000 and socket 4200, but they can be changed in the .env file
