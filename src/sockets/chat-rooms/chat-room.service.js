@@ -1,20 +1,37 @@
 class chatRoomService {
 
+    /**
+       * Repositories
+       * @Injectable
+       * @param {Object} chatRoomRepository Chat repository
+       * @param {Object} participantsRepository participant repository
+       */
     constructor(chatRoomRepository, participantsRepository) {
         this.chatRoomRepository = chatRoomRepository;
         this.participantsRepository = participantsRepository
     }
 
-    addParticipant(userData, room) {
+     /**
+   * Add participant
+   * @param {Object} userData user Data
+   * @param {String} room room
+   * @returns {Promise} participants
+   */
+    addParticipant(userData) {
         return new Promise((resolve, reject) => {
             this.participantsRepository
-                .addParticipant(userData, room)
+                .addParticipant(userData)
                 .then(() => this.participantsRepository.findAllParticipants())
                 .then((participantsData) => resolve(participantsData))
                 .catch((error) => { return reject(error); });
         });
     }
 
+    /**
+   * Remove participant
+   * @param {String} socket_id socket_id
+   * @returns {Promise} participants
+   */
     removeParticipant(socket_id) {
         return new Promise((resolve, reject) => {
             this.participantsRepository
@@ -25,6 +42,11 @@ class chatRoomService {
         });
     }
 
+     /**
+   * Save messages
+   * @param {Object} dataMessage Data Message
+   * @returns {Promise} Messages
+   */
     saveMessage(dataMessage) {
         return new Promise((resolve, reject) => {
             this.chatRoomRepository

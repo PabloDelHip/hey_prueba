@@ -1,6 +1,11 @@
 const { Database } = require('../../support');
 const { ParticipantsSchema  } = require('./participants.schema');
-
+ /**
+   * Add participant
+   * @param {Object} userData user Data
+   * @param {String} room room
+   * @returns {Promise} participants
+   */
  function addParticipant(userData) {
    return new Promise((resolve, reject) => {
      const participantsSchema = Database.getModel('participants', ParticipantsSchema);
@@ -14,6 +19,10 @@ const { ParticipantsSchema  } = require('./participants.schema');
    });
  }
 
+ /**
+   * Find all participant
+   * @returns {Promise} participants
+   */
  function findAllParticipants() {
    return new Promise((resolve, reject) => {
      const participantsSchema = Database.getModel('participants', ParticipantsSchema);
@@ -27,6 +36,11 @@ const { ParticipantsSchema  } = require('./participants.schema');
    });
  }
 
+ /**
+   * Remove participant
+   * @param {String} socket_id socket_id
+   * @returns {Promise} participants
+   */
  function removeParticipant(id_socket) {
   return new Promise((resolve, reject) => {
     const participantsSchema = Database.getModel('participants', ParticipantsSchema);

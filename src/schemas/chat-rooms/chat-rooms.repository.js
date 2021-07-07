@@ -1,6 +1,11 @@
 const { Database } = require('../../support');
 const { RoomsSchema  } = require('./chat-rooms.schema');
 
+   /**
+   * Save messages
+   * @param {Object} dataMessage Data Message
+   * @returns {Promise} Messages
+   */
  function saveMessage(messageData) {
   return new Promise((resolve, reject) => {
     const roomsSchema = Database.getModel('chat-rooms', RoomsSchema);
@@ -14,6 +19,10 @@ const { RoomsSchema  } = require('./chat-rooms.schema');
   });
 }
 
+ /**
+   * Get all messages
+   * @returns {Promise} messages
+   */
 function getAllMessages() {
   return new Promise((resolve, reject) => {
     const roomsSchema = Database.getModel('chat-rooms', RoomsSchema);
